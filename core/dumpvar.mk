@@ -26,6 +26,11 @@ print_build_config_vars := \
   OUT_DIR \
   AUX_OS_VARIANT_LIST
 
+ifneq ($(RECOVERY_VARIANT),)
+print_build_config_vars += \
+  RECOVERY_VARIANT
+endif
+
 ifeq ($(WITH_GMS),true)
 print_build_config_vars += \
   WITH_GMS
