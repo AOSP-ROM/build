@@ -961,4 +961,10 @@ include $(BUILD_SYSTEM)/ninja_config.mk
 include $(BUILD_SYSTEM)/soong_config.mk
 endif
 
+# Rules for QCOM targets
+-include $(TOPDIR)vendor/aosp/build/core/qcom_target.mk
+
+# Rules for MTK targets
+-include $(TOPDIR)vendor/aosp/build/core/mtk_target.mk
+
 include $(BUILD_SYSTEM)/dumpvar.mk
