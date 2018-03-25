@@ -89,6 +89,7 @@ $(SOONG_VARIABLES): FORCE
 	echo '    "Target_shim_libs": "$(subst $(space),:,$(TARGET_LD_SHIM_LIBS))",'; \
 	echo '    "Uses_generic_camera_parameter_library": $(if $(TARGET_SPECIFIC_CAMERA_PARAMETER_LIBRARY),false,true),'; \
 	echo '    "Uses_qcom_bsp_legacy": $(if $(filter true,$(TARGET_USES_QCOM_BSP_LEGACY)),true,false),'; \
+	echo '    "Uses_qti_camera_device": $(if $(filter true,$(TARGET_USES_QTI_CAMERA_DEVICE)),true,false),'; \
 	echo ''; \
 	echo '    "ArtUseReadBarrier": $(if $(filter false,$(PRODUCT_ART_USE_READ_BARRIER)),false,true),'; \
 	echo ''; \
